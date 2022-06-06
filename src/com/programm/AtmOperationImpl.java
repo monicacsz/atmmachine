@@ -11,7 +11,14 @@ public class AtmOperationImpl implements AtmOperationInterf {
 
 	@Override
 	public void withdrawAmount(double withdrawAmount) {
-		// TODO Auto-generated method stub
+		if(withdrawAmount <= atm.getBalance()) {
+			System.out.println("Collect Cash " + withdrawAmount);
+			atm.setBalance(atm.getBalance() - withdrawAmount);
+			viewBalance();
+		}
+		else {
+			System.out.println("Insufficient funds.");
+		}
 		
 	}
 

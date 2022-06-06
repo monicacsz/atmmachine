@@ -33,7 +33,7 @@ public class MainClass {
 						
 					}
 					else if(choice == 3) {
-						System.out.println("Enter amount to deposit");
+						System.out.println("Enter amount to deposit: ");
 						double depositAmount = keyboardInput.nextDouble();
 						op.depositAmount(depositAmount);
 						
